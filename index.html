@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Web Development Practical Programs</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #222;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            text-align: center;
+            padding: 35px 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        header h1 {
+            font-size: 38px;
+            color: #4a148c;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 18px;
+            color: #555;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 35px auto;
+        }
+        
+        .welcome {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 35px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .welcome h2 {
+            color: #6a1b9a;
+            margin-bottom: 10px;
+        }
+        
+        .welcome p {
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px 25px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+            transition: 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .icon {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+        
+        .card h3 {
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+        
+        .card p {
+            color: #666;
+            line-height: 1.5;
+            min-height: 65px;
+        }
+        
+        .html-card {
+            border-top: 8px solid #ff5722;
+        }
+        
+        .html-card h3 {
+            color: #e64a19;
+        }
+        
+        .css-card {
+            border-top: 8px solid #2196f3;
+        }
+        
+        .css-card h3 {
+            color: #1565c0;
+        }
+        
+        .js-card {
+            border-top: 8px solid #ff9800;
+        }
+        
+        .js-card h3 {
+            color: #ef6c00;
+        }
+        
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 13px 22px;
+            border-radius: 25px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        
+        .html-btn {
+            background: linear-gradient(135deg, #ff5722, #e91e63);
+        }
+        
+        .css-btn {
+            background: linear-gradient(135deg, #2196f3, #673ab7);
+        }
+        
+        .js-btn {
+            background: linear-gradient(135deg, #ff9800, #f44336);
+        }
+        
+        .btn:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+        
+        .stats {
+            margin-top: 40px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 25px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .stat h2 {
+            color: #6a1b9a;
+            font-size: 30px;
+        }
+        
+        .stat p {
+            color: #555;
+            margin-top: 5px;
+        }
+        
+        footer {
+            margin-top: 45px;
+            background: rgba(0, 0, 0, 0.75);
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+        
+        footer p {
+            margin: 5px;
+        }
+        
+        @media (max-width: 900px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            header h1 {
+                font-size: 30px;
+            }
+        }
+        
+        @media (max-width: 500px) {
+            .stats {
+                grid-template-columns: 1fr;
+            }
+            header h1 {
+                font-size: 25px;
+            }
+            header p {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>💻 Web Development Practical Programs</h1>
+        <p>HTML, CSS & JavaScript Practical Assignment</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Welcome Section -->
+        <section class="welcome">
+            <h2>🌐 Welcome to My Practical Programs Website</h2>
+
+            <p>
+                This website contains practical programs based on HTML, CSS and JavaScript. Select any category below to view and execute the programs.
+            </p>
+        </section>
+
+        <!-- Main Cards -->
+        <section class="cards">
+
+            <!-- HTML Card -->
+            <div class="card html-card">
+
+                <div class="icon">🌐</div>
+
+                <h3>HTML Programs</h3>
+
+                <p>
+                    Learn HTML fundamentals, forms, tables, multimedia, semantic elements and more.
+                </p>
+
+                <p>
+                    <strong>15 Programs</strong>
+                </p>
+
+                <a href="html/index.html" class="btn html-btn">
+                    View HTML Programs →
+                </a>
+
+            </div>
+
+
+            <!-- CSS Card -->
+            <div class="card css-card">
+
+                <div class="icon">🎨</div>
+
+                <h3>CSS Programs</h3>
+
+                <p>
+                    Learn CSS selectors, layouts, Flexbox, Grid, animations, responsive design and more.
+                </p>
+
+                <p>
+                    <strong>75 Programs</strong>
+                </p>
+
+                <a href="css/index.html" class="btn css-btn">
+                    View CSS Programs →
+                </a>
+
+            </div>
+
+
+            <!-- JavaScript Card -->
+            <div class="card js-card">
+
+                <div class="icon">⚡</div>
+
+                <h3>JavaScript Programs</h3>
+
+                <p>
+                    Learn JavaScript programming, DOM, events, forms, browser features, storage and projects.
+                </p>
+
+                <p>
+                    <strong>67+ Programs & Projects</strong>
+                </p>
+
+                <a href="JavaScript_Practical_FIXED/index.html" class="btn js-btn">
+                    View JavaScript Programs →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- Statistics -->
+        <section class="stats">
+
+            <div class="stat">
+                <h2>15</h2>
+                <p>HTML Programs</p>
+            </div>
+
+            <div class="stat">
+                <h2>75</h2>
+                <p>CSS Programs</p>
+            </div>
+
+            <div class="stat">
+                <h2>67+</h2>
+                <p>JavaScript Programs</p>
+            </div>
+
+            <div class="stat">
+                <h2>📚</h2>
+                <p>Practical Learning</p>
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            <strong>Web Development Practical Programs</strong>
+        </p>
+
+        <p>
+            Student: Jangili Nageswara Rao
+        </p>
+
+        <p>
+            B.Tech 2nd Year | Section 7
+        </p>
+
+        <p>
+            © 2026 Web Development Practical
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

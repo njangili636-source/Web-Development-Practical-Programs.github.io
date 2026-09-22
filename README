@@ -1,0 +1,99 @@
+# 💻 Web Development Practical Programs
+
+## 👨‍🎓 Student Details
+
+| Details | Information |
+|---|---|
+| Student Name | Jangili Nageswara Rao |
+| P.R.N. No. | 250200037 |
+| Year | B.Tech 2nd Year |
+| Section | 7 |
+| Subject | Web Development |
+| Assignment | HTML, CSS & JavaScript Practical Programs |
+| Total Programs | 324 |
+
+## 📚 Project Description
+
+This project contains practical programs based on HTML, CSS and JavaScript.
+
+It includes individual programs, interactive examples, DOM manipulation, events, forms, browser features, web storage and mini projects.
+
+## 📌 Project Sections
+
+### 🌐 HTML Programs
+**Total: 15**
+
+- HTML Fundamentals
+- Lists and Tables
+- Images and Links
+- Forms
+- Audio and Video
+- Frames and Iframes
+- Semantic Elements
+- HTML5 Input Types
+- Responsive Webpages
+- Bootstrap
+- Portfolio
+
+### 🎨 CSS Programs
+**Total: 75**
+
+- Selectors
+- Colors and Backgrounds
+- Fonts and Text
+- Box Model
+- Positioning
+- Flexbox
+- Grid
+- Navigation Bar
+- Pseudo-classes
+- Media Queries
+- Transitions
+- Animations
+- Responsive Design
+
+### ⚡ JavaScript Programs
+**Total: 67+**
+
+- Basic JavaScript
+- Mini Projects
+- DOM Manipulation
+- JavaScript Events
+- Forms and Validation
+- Browser Objects & Browser Features
+- Web Storage
+
+## 📁 Folder Structure
+
+```text
+Practical_Project/
+│
+├── index.html
+├── README.md
+│
+├── assets/
+│   ├── images/
+│   ├── icons/
+│   ├── audio/
+│   └── video/
+│
+├── html/
+│   ├── index.html
+│   ├── html-01.html ... html-15.html
+│   └── style.css
+│
+├── css/
+│   ├── index.html
+│   ├── css-01.html ... css-75.html
+│   └── style.css
+│
+└── JavaScript_Practical_FIXED/
+    ├── index.html
+    ├── js-01.html ... js-67.html
+    │
+    ├── Mini Projects/
+    ├── DOM Manipulation/
+    ├── JavaScript Events/
+    ├── Forms and Validation/
+    ├── Browser Objects & Browser Features/
+    └── Web Storage/
