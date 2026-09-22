@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Responsive Login Signup</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #eee;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 50px auto;
+        }
+        
+        .box {
+            width: 300px;
+            background: white;
+            padding: 25px;
+            box-shadow: 0 0 10px gray;
+        }
+        
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+        
+        button {
+            width: 100%;
+            padding: 10px;
+            background: black;
+            color: white;
+            border: none;
+        }
+        
+        @media (max-width: 700px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="text-align:center;">Login and Signup</h1>
+
+    <div class="container">
+
+        <div class="box">
+            <h2>Login</h2>
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button>Login</button>
+        </div>
+
+        <div class="box">
+            <h2>Signup</h2>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button>Signup</button>
+        </div>
+
+    </div>
+
+    <a href="index.html">Back to Programs</a><br><br>
+    <a href="../index.html">Home</a>
+
+</body>
+
+</html>

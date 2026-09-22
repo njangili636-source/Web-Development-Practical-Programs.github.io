@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Program 07</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            height: 1000px;
+        }
+        
+        .static {
+            position: static;
+            background-color: lightgray;
+            padding: 15px;
+        }
+        
+        .relative {
+            position: relative;
+            left: 30px;
+            background-color: lightblue;
+            padding: 15px;
+        }
+        
+        .parent {
+            position: relative;
+            width: 400px;
+            height: 150px;
+            background-color: lightgreen;
+            margin: 20px;
+        }
+        
+        .absolute {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            background-color: orange;
+            padding: 10px;
+        }
+        
+        .fixed {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background-color: red;
+            color: white;
+            padding: 10px;
+        }
+        
+        .sticky {
+            position: sticky;
+            top: 0;
+            background-color: purple;
+            color: white;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Positioning</h1>
+
+    <div class="static">
+        Static Position
+    </div>
+
+    <br>
+
+    <div class="relative">
+        Relative Position
+    </div>
+
+    <div class="parent">
+        Parent Element
+
+        <div class="absolute">
+            Absolute Position
+        </div>
+    </div>
+
+    <div class="sticky">
+        Sticky Position
+    </div>
+
+    <p>Scroll the page to see the positioning effects.</p>
+    <p>Scroll down...</p>
+    <p>Scroll down...</p>
+    <p>Scroll down...</p>
+
+    <div class="fixed">
+        Fixed Position
+    </div>
+
+    <br>
+
+    <a href="index.html">Back to Programs</a>
+    <br><br>
+    <a href="../index.html">Home</a>
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Responsive Image Gallery</title>
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        
+        .gallery img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        
+        @media (max-width: 800px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 500px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Responsive Image Gallery</h1>
+
+    <div class="gallery">
+        <img src="https://picsum.photos/id/1015/300/200">
+        <img src="https://picsum.photos/id/1016/300/200">
+        <img src="https://picsum.photos/id/1018/300/200">
+        <img src="https://picsum.photos/id/1020/300/200">
+    </div>
+
+    <br>
+    <a href="index.html">Back to Programs</a><br><br>
+    <a href="../index.html">Home</a>
+
+</body>
+
+</html>

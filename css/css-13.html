@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Program 13</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        
+        .form-container {
+            width: 400px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        label {
+            display: block;
+            margin-top: 12px;
+        }
+        
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+        
+        button {
+            margin-top: 20px;
+            padding: 10px 25px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        
+        button:hover {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+
+        <h1>Registration Form</h1>
+
+        <form>
+
+            <label>Name:</label>
+            <input type="text" placeholder="Enter your name">
+
+            <label>Email:</label>
+            <input type="email" placeholder="Enter your email">
+
+            <label>Password:</label>
+            <input type="password" placeholder="Enter password">
+
+            <label>Course:</label>
+
+            <select>
+                <option>BCA</option>
+                <option>B.Sc</option>
+                <option>B.Tech</option>
+            </select>
+
+            <label>Address:</label>
+            <textarea rows="4"></textarea>
+
+            <button type="submit">Register</button>
+
+        </form>
+
+    </div>
+
+    <a href="index.html">Back to Programs</a>
+    <br><br>
+    <a href="../index.html">Home</a>
+
+</body>
+
+</html>

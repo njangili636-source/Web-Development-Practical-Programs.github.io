@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Animation</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: lightblue;
+            position: relative;
+            animation: moveBox 3s infinite;
+        }
+        
+        @keyframes moveBox {
+            0% {
+                left: 0;
+            }
+            50% {
+                left: 300px;
+            }
+            100% {
+                left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Keyframe Animation</h1>
+
+    <div class="box"></div>
+
+    <br><br><br>
+
+    <a href="index.html">Back to Programs</a><br><br>
+    <a href="../index.html">Home</a>
+
+</body>
+
+</html>

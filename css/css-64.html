@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mobile First Design</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+        }
+        
+        .container {
+            display: block;
+            padding: 20px;
+        }
+        
+        .box {
+            padding: 30px;
+            margin: 10px 0;
+            background: #eee;
+            text-align: center;
+        }
+        
+        @media (min-width: 700px) {
+            .container {
+                display: flex;
+                gap: 20px;
+            }
+            .box {
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Mobile-First Responsive Design</h1>
+
+    <div class="container">
+        <div class="box">HTML</div>
+        <div class="box">CSS</div>
+        <div class="box">JavaScript</div>
+    </div>
+
+    <p>Resize the browser to see the responsive design.</p>
+
+    <a href="index.html">Back to Programs</a><br><br>
+    <a href="../index.html">Home</a>
+
+</body>
+
+</html>

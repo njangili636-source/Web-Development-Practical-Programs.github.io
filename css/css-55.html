@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>College Homepage</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+        
+        header {
+            background: #333;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        nav {
+            background: #555;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 70px;
+            background: #eee;
+        }
+        
+        .courses {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            padding: 40px;
+        }
+        
+        .course {
+            padding: 30px;
+            background: #ddd;
+            width: 200px;
+            text-align: center;
+        }
+        
+        @media (max-width: 600px) {
+            .courses {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav a {
+                display: block;
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>ABC Engineering College</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Courses</a>
+        <a href="#">Admissions</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="hero">
+        <h1>Welcome to Our College</h1>
+        <p>Quality Education for a Better Future</p>
+    </div>
+
+    <div class="courses">
+
+        <div class="course">
+            <h2>CSE</h2>
+            <p>Computer Science</p>
+        </div>
+
+        <div class="course">
+            <h2>ECE</h2>
+            <p>Electronics</p>
+        </div>
+
+        <div class="course">
+            <h2>EEE</h2>
+            <p>Electrical</p>
+        </div>
+
+    </div>
+
+    <a href="index.html">Back to Programs</a><br><br>
+    <a href="../index.html">Home</a>
+
+</body>
+
+</html>

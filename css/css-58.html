@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Travel Homepage</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+        
+        .hero {
+            height: 450px;
+            background-image: url("https://picsum.photos/id/1016/1200/600");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding-top: 100px;
+            box-sizing: border-box;
+        }
+        
+        .hero h1 {
+            font-size: 45px;
+        }
+        
+        button {
+            padding: 12px 25px;
+            border: none;
+        }
+        
+        .places {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px;
+        }
+        
+        .place {
+            padding: 30px;
+            background: #eee;
+            text-align: center;
+        }
+        
+        @media (max-width: 600px) {
+            .places {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="hero">
+        <h1>Explore the World</h1>
+        <p>Discover beautiful destinations</p>
+        <button>Explore Now</button>
+    </div>
+
+    <h1 style="text-align:center;">Popular Places</h1>
+
+    <div class="places">
+        <div class="place">Beaches</div>
+        <div class="place">Mountains</div>
+        <div class="place">Cities</div>
+    </div>
+
+    <a href="index.html">Back to Programs</a><br><br>
+    <a href="../index.html">Home</a>
+
+</body>
+
+</html>

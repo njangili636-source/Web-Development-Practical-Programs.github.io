@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML Programs</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ffecd2, #fcb69f);
+            min-height: 100vh;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #ff512f, #dd2476);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+        
+        header h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 18px;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 30px auto;
+        }
+        
+        .programs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .number {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ff512f;
+        }
+        
+        .card h2 {
+            margin: 12px 0;
+            color: #333;
+        }
+        
+        .card p {
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 20px;
+            background: linear-gradient(135deg, #ff512f, #dd2476);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+        
+        .btn:hover {
+            opacity: 0.85;
+        }
+        
+        .home {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .home a {
+            text-decoration: none;
+            background: #333;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+        }
+        
+        footer {
+            text-align: center;
+            background: #222;
+            color: white;
+            padding: 20px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🌐 HTML Programs</h1>
+        <p>HTML Practical Programs – Experiments 1 to 15</p>
+    </header>
+
+    <div class="container">
+
+        <div class="programs">
+
+            <div class="card">
+                <div class="number">01</div>
+                <h2>Basic HTML</h2>
+                <p>Headings, paragraphs and line breaks.</p>
+                <a href="html-01.html" class="btn">View Program →</a>
+            </div>
+
+            <div class="card">
+                <div class="number">02</div>
+                <h2>HTML Lists</h2>
+                <p>Ordered, unordered and description lists.</p>
+                <a href="html-02.html" class="btn">View Program →</a>
+            </div>
+
+            <div class="card">
+                <div class="number">03</div>
+                <h2>HTML Tables</h2>
+                <p>Tables, rows, columns, borders and merged cells.</p>
+                <a href="html-03.html" class="btn">View Program →</a>
+            </div>
+
+            <div class="card">
+                <div class="number">04</div>
+                <h2>Images & Links</h2>
+                <p>Images and hyperlinks in HTML.</p>
+                <a href="html-04.html" class="btn">View Program →</a>
+            </div>
+
+            <div class="card">
+                <div class="number">05</div>
+                <h2>Registration Form</h2>
+                <p>Student registration form using HTML elements.</p>
+                <a href="html-05.html" class="btn">View Program →</a>
+            </div>
+
+            <div class="card">
+                <div class="number">06</div>
+                <h2>Audio & Video</h2>
+                <p>Demonstration of audio and video elements.</p>
+                <a href="html-06.html" class="btn">View Program →</a>
+            </div>
+
+            <div class="card">
+                <div class="number">07</div>
+                <h2>Frames & Iframes</h2>
+                <p>Working with iframe elements.</p>
+                <a href="html-07.html" class="btn">View Program →</a>
+            </div>
+
+            <div class="card">
+                <div class="number">08</div>
+                <h2>Semantic HTML</h2>
+                <p>Header, nav, section, article and footer.</p>
+                <a href="html-08.html" class="btn">View Program →</a>
+            </div>
+
+            <div class="card">
+                <div class="number">09</div>
+                <h2>HTML5 Input Types</h2>
+                <p>Email, date, number and password inputs.</p>
+                <a href="html-09.html" class="btn">View Program →</a>
+            </div>
+
+            <div class="card">
+                <div class="number">10</div>
+                <h2>College Timetable</h2>
+                <p>Create a college timetable using HTML tables.</p>
+                <a href="html-10.html" class="btn">View Program →</a>
+            </div>
+
+            <div class="card">
+                <div class="number">11</div>
+                <h2>CSS Styling</h2>
+                <p>Internal and external CSS styling.</p>
+                <a href="html-11.html" class="btn">View Program →</a>
+            </div>
+
+            <div class="card">
+                <div class="number">12</div>
+                <h2>CSS Selectors</h2>
+                <p>Selectors, colors, fonts, margins, padding and borders.</p>
+                <a href="html-12.html" class="btn">View Program →</a>
+            </div>
+
+            <div class="card">
+                <div class="number">13</div>
+                <h2>Responsive Webpage</h2>
+                <p>Responsive design using CSS media queries.</p>
+                <a href="html-13.html" class="btn">View Program →</a>
+            </div>
+
+            <div class="card">
+                <div class="number">14</div>
+                <h2>Bootstrap</h2>
+                <p>Bootstrap components and responsive design.</p>
+                <a href="html-14.html" class="btn">View Program →</a>
+            </div>
+
+            <div class="card">
+                <div class="number">15</div>
+                <h2>Personal Portfolio</h2>
+                <p>Simple personal portfolio using HTML and CSS.</p>
+                <a href="html-15.html" class="btn">View Program →</a>
+            </div>
+
+        </div>
+
+        <div class="home">
+            <a href="../index.html">🏠 Back to Main Home</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 HTML Practical Programs | Practical Project</p>
+    </footer>
+
+</body>
+
+</html>

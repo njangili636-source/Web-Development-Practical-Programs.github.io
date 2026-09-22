@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flexbox Alignment and Order</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            height: 300px;
+            background: #eee;
+        }
+        
+        .box {
+            width: 100px;
+            padding: 30px;
+            background: lightblue;
+            text-align: center;
+        }
+        
+        .one {
+            order: 3;
+        }
+        
+        .two {
+            order: 1;
+        }
+        
+        .three {
+            order: 2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Flexbox Alignment and Order</h1>
+
+    <div class="container">
+        <div class="box one">One</div>
+        <div class="box two">Two</div>
+        <div class="box three">Three</div>
+    </div>
+
+    <br>
+    <a href="index.html">Back to Programs</a><br><br>
+    <a href="../index.html">Home</a>
+
+</body>
+
+</html>

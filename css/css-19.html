@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Program 19</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        
+        nav a {
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+        }
+        
+        nav a:hover {
+            background-color: #555;
+        }
+        
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+
+    </nav>
+
+    <h1>Responsive Navigation Menu</h1>
+
+    <p>
+        Resize the browser window to see the responsive effect.
+    </p>
+
+    <br>
+
+    <a href="index.html">Back to Programs</a>
+    <br><br>
+    <a href="../index.html">Home</a>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Tooltip</title>
+    <style>
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            margin: 50px;
+        }
+        
+        .tooltip-text {
+            visibility: hidden;
+            background: black;
+            color: white;
+            padding: 10px;
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+        }
+        
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Tooltip</h1>
+
+    <div class="tooltip">
+        Move mouse here
+        <span class="tooltip-text">This is a tooltip</span>
+    </div>
+
+    <br><br>
+    <a href="index.html">Back to Programs</a><br><br>
+    <a href="../index.html">Home</a>
+
+</body>
+
+</html>
