@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2. Arithmetic Operations</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f2f2f2;margin:0;padding:25px}
+.box{max-width:900px;margin:auto;background:#fff;padding:28px;border-radius:10px;box-shadow:0 2px 10px #bbb}
+input,button,select,textarea{padding:9px;margin:5px;font-size:15px}
+button{cursor:pointer}
+.output{margin-top:15px;padding:12px;background:#eee;border-radius:6px;min-height:20px}
+nav{margin-top:25px}
+nav a{margin-right:18px}
+</style>
+</head>
+<body><div class="box">
+<h1>2. Arithmetic Operations</h1>
+<p>Perform addition, subtraction, multiplication and division.</p>
+<input id="a" type="number" value="20"><input id="b" type="number" value="5"><button onclick="run()">Run Program</button><div id="out" class="output"></div>
+<nav><a href="index.html">Back to Programs</a> <a href="../index.html">Home</a></nav>
+</div>
+<script>function run(){let a=+document.getElementById('a').value,b=+document.getElementById('b').value;out.textContent=`Sum=${a+b}, Difference=${a-b}, Product=${a*b}, Quotient=${b?a/b:'undefined'}`}</script>
+</body>
+</html>

@@ -1,1 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Practical Programs</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #222;
+        }
+        /* HEADER */
+        
+        header {
+            text-align: center;
+            padding: 45px 20px;
+            color: white;
+        }
+        
+        header h1 {
+            font-size: 42px;
+            margin: 0 0 10px;
+        }
+        
+        header p {
+            font-size: 18px;
+            margin: 0;
+        }
+        /* MAIN */
+        
+        .container {
+            width: 92%;
+            max-width: 1100px;
+            margin: auto;
+        }
+        /* SECTION */
+        
+        .section {
+            background: white;
+            margin: 25px 0;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .section-title {
+            text-align: center;
+            color: #5b3cc4;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        /* PROGRAM GRID */
+        
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .program-card {
+            background: linear-gradient(135deg, #f5f7ff, #ffffff);
+            padding: 18px;
+            border-radius: 14px;
+            border: 1px solid #ddd;
+            transition: 0.3s;
+        }
+        
+        .program-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .program-card a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        
+        .program-card a:hover {
+            color: #6c42d9;
+        }
+        /* CATEGORY CARDS */
+        
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .category-card {
+            color: white;
+            padding: 25px;
+            border-radius: 18px;
+            text-align: center;
+            transition: 0.3s;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-7px) scale(1.02);
+        }
+        
+        .mini {
+            background: linear-gradient(135deg, #ff6a88, #ff99ac);
+        }
+        
+        .dom {
+            background: linear-gradient(135deg, #36d1dc, #5b86e5);
+        }
+        
+        .events {
+            background: linear-gradient(135deg, #11998e, #38ef7d);
+        }
+        
+        .forms {
+            background: linear-gradient(135deg, #f7971e, #ffd200);
+        }
+        
+        .browser {
+            background: linear-gradient(135deg, #8e2de2, #4a00e0);
+        }
+        
+        .storage {
+            background: linear-gradient(135deg, #ee0979, #ff6a00);
+        }
+        
+        .category-card h3 {
+            font-size: 24px;
+            margin-top: 5px;
+        }
+        
+        .category-card p {
+            min-height: 45px;
+        }
+        
+        .category-card a {
+            display: inline-block;
+            background: white;
+            color: #333;
+            padding: 10px 18px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        .category-card a:hover {
+            background: #222;
+            color: white;
+        }
+        /* HOME BUTTON */
+        
+        .home {
+            text-align: center;
+            padding: 25px;
+        }
+        
+        .home a {
+            display: inline-block;
+            background: white;
+            color: #5b3cc4;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        /* FOOTER */
+        
+        footer {
+            text-align: center;
+            color: white;
+            padding: 25px;
+        }
+        
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <h1>💻 JavaScript Practical Programs</h1>
+
+        <p>
+            🚀 Learn • Practice • Explore • Build with JavaScript
+        </p>
+
+    </header>
+
+
+    <div class="container">
+
+        <!-- BASIC PROGRAMS -->
+
+        <div class="section">
+
+            <h2 class="section-title">
+                🟨 Basic JavaScript Programs
+            </h2>
+
+            <div class="program-grid">
+
+                <div class="program-card"><a href="js-01.html">01. Hello World</a></div>
+                <div class="program-card"><a href="js-02.html">02. Arithmetic Operations</a></div>
+                <div class="program-card"><a href="js-03.html">03. Largest of Three Numbers</a></div>
+                <div class="program-card"><a href="js-04.html">04. Even or Odd</a></div>
+                <div class="program-card"><a href="js-05.html">05. Positive, Negative or Zero</a></div>
+                <div class="program-card"><a href="js-06.html">06. Factorial</a></div>
+                <div class="program-card"><a href="js-07.html">07. Fibonacci Series</a></div>
+                <div class="program-card"><a href="js-08.html">08. Prime Number</a></div>
+                <div class="program-card"><a href="js-09.html">09. Palindrome Number</a></div>
+                <div class="program-card"><a href="js-10.html">10. Reverse Number</a></div>
+                <div class="program-card"><a href="js-11.html">11. Sum of Digits</a></div>
+                <div class="program-card"><a href="js-12.html">12. Largest & Smallest Array</a></div>
+                <div class="program-card"><a href="js-13.html">13. Sort Array</a></div>
+                <div class="program-card"><a href="js-14.html">14. Sum & Average Array</a></div>
+                <div class="program-card"><a href="js-15.html">15. Functions</a></div>
+                <div class="program-card"><a href="js-16.html">16. Arrow Functions</a></div>
+                <div class="program-card"><a href="js-17.html">17. Strings</a></div>
+                <div class="program-card"><a href="js-18.html">18. Arrays</a></div>
+                <div class="program-card"><a href="js-19.html">19. Objects</a></div>
+                <div class="program-card"><a href="js-20.html">20. Date & Math</a></div>
+
+                <div class="program-card"><a href="js-21.html">21. DOM & Events</a></div>
+                <div class="program-card"><a href="js-22.html">22. Change Text</a></div>
+                <div class="program-card"><a href="js-23.html">23. Background Color</a></div>
+                <div class="program-card"><a href="js-24.html">24. Button Click</a></div>
+                <div class="program-card"><a href="js-25.html">25. Show / Hide Element</a></div>
+                <div class="program-card"><a href="js-26.html">26. Change Image</a></div>
+                <div class="program-card"><a href="js-27.html">27. Digital Clock</a></div>
+                <div class="program-card"><a href="js-28.html">28. Calculator</a></div>
+                <div class="program-card"><a href="js-29.html">29. Guessing Game</a></div>
+                <div class="program-card"><a href="js-30.html">30. Form Validation</a></div>
+                <div class="program-card"><a href="js-31.html">31. Field Validation</a></div>
+                <div class="program-card"><a href="js-32.html">32. To-Do List</a></div>
+                <div class="program-card"><a href="js-33.html">33. Quiz Application</a></div>
+                <div class="program-card"><a href="js-34.html">34. Counter</a></div>
+                <div class="program-card"><a href="js-35.html">35. Stopwatch</a></div>
+                <div class="program-card"><a href="js-36.html">36. Countdown</a></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ADVANCED -->
+
+        <div class="section">
+
+            <h2 class="section-title">
+                🟦 Advanced JavaScript
+            </h2>
+
+            <div class="program-grid">
+
+                <div class="program-card"><a href="js-38.html">38. ES6 Features</a></div>
+                <div class="program-card"><a href="js-39.html">39. Spread & Rest</a></div>
+                <div class="program-card"><a href="js-40.html">40. Classes & Objects</a></div>
+                <div class="program-card"><a href="js-41.html">41. Inheritance</a></div>
+                <div class="program-card"><a href="js-42.html">42. Callbacks & Promises</a></div>
+                <div class="program-card"><a href="js-43.html">43. Fetch API</a></div>
+                <div class="program-card"><a href="js-44.html">44. API Data</a></div>
+                <div class="program-card"><a href="js-45.html">45. Local Storage</a></div>
+                <div class="program-card"><a href="js-46.html">46. Login Form</a></div>
+                <div class="program-card"><a href="js-47.html">47. Interactive Webpage</a></div>
+                <div class="program-card"><a href="js-48.html">48. Swap Numbers</a></div>
+                <div class="program-card"><a href="js-49.html">49. GCD</a></div>
+                <div class="program-card"><a href="js-50.html">50. LCM</a></div>
+                <div class="program-card"><a href="js-51.html">51. Armstrong Number</a></div>
+                <div class="program-card"><a href="js-52.html">52. Perfect Number</a></div>
+                <div class="program-card"><a href="js-53.html">53. Multiplication Table</a></div>
+                <div class="program-card"><a href="js-54.html">54. Power</a></div>
+                <div class="program-card"><a href="js-55.html">55. Count Digits</a></div>
+                <div class="program-card"><a href="js-56.html">56. Second Largest</a></div>
+                <div class="program-card"><a href="js-57.html">57. Remove Duplicates</a></div>
+                <div class="program-card"><a href="js-58.html">58. Merge Arrays</a></div>
+                <div class="program-card"><a href="js-59.html">59. Array Frequency</a></div>
+                <div class="program-card"><a href="js-60.html">60. Common Elements</a></div>
+                <div class="program-card"><a href="js-61.html">61. Reverse String</a></div>
+                <div class="program-card"><a href="js-62.html">62. String Palindrome</a></div>
+                <div class="program-card"><a href="js-63.html">63. Vowels & Consonants</a></div>
+                <div class="program-card"><a href="js-64.html">64. Count Words</a></div>
+                <div class="program-card"><a href="js-65.html">65. Character Frequency</a></div>
+                <div class="program-card"><a href="js-66.html">66. Regular Expression</a></div>
+                <div class="program-card"><a href="js-67.html">67. Email Regex</a></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- OTHER JAVASCRIPT PARTS -->
+
+        <div class="section">
+
+            <h2 class="section-title">
+                🚀 JavaScript Practical Sections
+            </h2>
+
+            <div class="category-grid">
+
+                <div class="category-card mini">
+                    <h3>🎮 Mini Projects</h3>
+                    <p>17 interactive JavaScript mini projects.</p>
+                    <a href="Mini Projects/index.html">
+                    View Mini Projects →
+                </a>
+                </div>
+
+
+                <div class="category-card dom">
+                    <h3>🌐 DOM Manipulation</h3>
+                    <p>35 DOM manipulation experiments.</p>
+                    <a href="DOM Manipulation/index.html">
+                    View DOM →
+                </a>
+                </div>
+
+
+                <div class="category-card events">
+                    <h3>⚡ JavaScript Events</h3>
+                    <p>30 event-based experiments.</p>
+                    <a href="JavaScript Events/index.html">
+                    View Events →
+                </a>
+                </div>
+
+
+                <div class="category-card forms">
+                    <h3>📝 Forms & Validation</h3>
+                    <p>40 form validation experiments.</p>
+                    <a href="Forms and Validation/index.html">
+                    View Forms →
+                </a>
+                </div>
+
+
+                <div class="category-card browser">
+                    <h3>🌍 Browser Objects</h3>
+                    <p>20 browser object experiments.</p>
+                    <a href="Browser Objects & Browser Features/index.html">
+                    View Browser →
+                </a>
+                </div>
+
+
+                <div class="category-card storage">
+                    <h3>💾 Web Storage</h3>
+                    <p>25 localStorage & sessionStorage experiments.</p>
+                    <a href="Web Storage/index.html">
+                    View Storage →
+                </a>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- HOME -->
+
+        <div class="home">
+
+            <a href="../index.html">
+            🏠 Back to Main Home
+        </a>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        <p>💻 JavaScript Practical Programs</p>
+        <p>🚀 Learn • Code • Practice • Create</p>
+
+    </footer>
+
+</body>
+
+</html>
+
+</html>
