@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>9. Password and Confirm Password</title>
+<style>
+body{font-family:Arial,sans-serif;max-width:850px;margin:30px auto;padding:20px;background:#f5f5f5}
+.box{background:white;padding:25px;border-radius:10px;box-shadow:0 2px 8px #ccc}
+input,select,textarea,button{padding:9px;margin:6px 0;width:100%;box-sizing:border-box}
+button{cursor:pointer;width:auto;background:#333;color:white;border:0;border-radius:5px;padding:10px 16px}
+label{font-weight:bold;display:block;margin-top:10px}
+.error{color:#c00;font-size:14px}.success{color:green;font-weight:bold}
+table{border-collapse:collapse;width:100%;margin-top:15px}th,td{border:1px solid #aaa;padding:8px}
+nav{margin-bottom:15px}nav a{margin-right:15px}
+.step{display:none}.step.active{display:block}
+.preview{background:#eee;padding:15px;margin-top:15px}
+</style>
+</head>
+<body><nav><a href="index.html">Back to Forms & Validation</a> <a href="../index.html">Back to JavaScript Programs</a></nav>
+<div class="box"><h1>9. Password and Confirm Password</h1><input id="p" type="password" placeholder="Password"><input id="c" type="password" placeholder="Confirm password"><button onclick="v()">Validate</button><p id="o"></p></div>
+<script>function v(){o.textContent=p.value&&p.value===c.value?"Passwords match":"Passwords do not match";o.className=p.value&&p.value===c.value?"success":"error"}</script></body></html>

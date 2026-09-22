@@ -1,0 +1,409 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Forms and Validation</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 30px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+        
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+        
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .number {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #ff6a00, #ee0979);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+        
+        .card h3 {
+            margin: 5px 0 10px;
+            color: #333;
+        }
+        
+        .card p {
+            color: #666;
+            min-height: 45px;
+        }
+        
+        .card a {
+            display: inline-block;
+            text-decoration: none;
+            background: #667eea;
+            color: white;
+            padding: 9px 15px;
+            border-radius: 7px;
+            margin-top: 10px;
+        }
+        
+        .card a:hover {
+            background: #764ba2;
+        }
+        
+        .back {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .back a {
+            color: white;
+            font-size: 17px;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 800px) {
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 500px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>📝 Forms and Validation</h1>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="number">01</div>
+                <h3>Student Registration Form</h3>
+                <p>Create a student registration form and validate all fields.</p>
+                <a href="01.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">02</div>
+                <h3>Login Form</h3>
+                <p>Create a login form with username and password validation.</p>
+                <a href="02.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">03</div>
+                <h3>Name Validation</h3>
+                <p>Validate a name field to accept only alphabets.</p>
+                <a href="03.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">04</div>
+                <h3>Age Validation</h3>
+                <p>Validate an age field using JavaScript.</p>
+                <a href="04.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">05</div>
+                <h3>Mobile Validation</h3>
+                <p>Validate a mobile phone number.</p>
+                <a href="05.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">06</div>
+                <h3>Email Validation</h3>
+                <p>Validate an email address.</p>
+                <a href="06.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">07</div>
+                <h3>Password Validation</h3>
+                <p>Validate a password based on minimum length.</p>
+                <a href="07.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">08</div>
+                <h3>Strong Password</h3>
+                <p>Create a strong password validator.</p>
+                <a href="08.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">09</div>
+                <h3>Confirm Password</h3>
+                <p>Validate password and confirm password fields.</p>
+                <a href="09.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">10</div>
+                <h3>Date of Birth</h3>
+                <p>Validate a date of birth field.</p>
+                <a href="10.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">11</div>
+                <h3>Gender Validation</h3>
+                <p>Validate a gender selection.</p>
+                <a href="11.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">12</div>
+                <h3>Radio Buttons</h3>
+                <p>Validate radio button selection.</p>
+                <a href="12.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">13</div>
+                <h3>Checkbox Validation</h3>
+                <p>Validate checkbox selection.</p>
+                <a href="13.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">14</div>
+                <h3>Dropdown Validation</h3>
+                <p>Validate a dropdown or select box.</p>
+                <a href="14.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">15</div>
+                <h3>Textarea Validation</h3>
+                <p>Validate a textarea field.</p>
+                <a href="15.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">16</div>
+                <h3>Required Fields</h3>
+                <p>Create a form with required-field validation.</p>
+                <a href="16.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">17</div>
+                <h3>Error Messages</h3>
+                <p>Display error messages beside form fields.</p>
+                <a href="17.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">18</div>
+                <h3>Success Message</h3>
+                <p>Display a success message after submission.</p>
+                <a href="18.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">19</div>
+                <h3>Prevent Submission</h3>
+                <p>Prevent form submission when validation fails.</p>
+                <a href="19.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">20</div>
+                <h3>Regular Expressions</h3>
+                <p>Validate a form using regular expressions.</p>
+                <a href="20.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">21</div>
+                <h3>Email Regex</h3>
+                <p>Validate an email using a regular expression.</p>
+                <a href="21.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">22</div>
+                <h3>Phone Regex</h3>
+                <p>Validate a phone number using a regular expression.</p>
+                <a href="22.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">23</div>
+                <h3>Password Regex</h3>
+                <p>Validate a password using a regular expression.</p>
+                <a href="23.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">24</div>
+                <h3>Real-Time Validation</h3>
+                <p>Create a real-time form validation system.</p>
+                <a href="24.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">25</div>
+                <h3>Form Events</h3>
+                <p>Use input, change, focus and blur events.</p>
+                <a href="25.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">26</div>
+                <h3>Password Strength</h3>
+                <p>Create a password strength meter.</p>
+                <a href="26.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">27</div>
+                <h3>Show / Hide Password</h3>
+                <p>Create a show and hide password option.</p>
+                <a href="27.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">28</div>
+                <h3>Registration Form</h3>
+                <p>Create a registration form with password confirmation.</p>
+                <a href="28.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">29</div>
+                <h3>College Admission</h3>
+                <p>Create a college admission form with validation.</p>
+                <a href="29.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">30</div>
+                <h3>Job Application</h3>
+                <p>Create a job application form with validation.</p>
+                <a href="30.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">31</div>
+                <h3>Feedback Form</h3>
+                <p>Create a feedback form with validation.</p>
+                <a href="31.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">32</div>
+                <h3>Contact Form</h3>
+                <p>Create a contact form with validation.</p>
+                <a href="32.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">33</div>
+                <h3>Multi-Step Form</h3>
+                <p>Create a multi-step registration form.</p>
+                <a href="33.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">34</div>
+                <h3>Information Preview</h3>
+                <p>Display a preview of entered information.</p>
+                <a href="34.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">35</div>
+                <h3>Age Calculator</h3>
+                <p>Calculate and display age from date of birth.</p>
+                <a href="35.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">36</div>
+                <h3>Marks Calculator</h3>
+                <p>Calculate total, average and grade.</p>
+                <a href="36.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">37</div>
+                <h3>Employee Salary</h3>
+                <p>Calculate employee salary details.</p>
+                <a href="37.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">38</div>
+                <h3>Shopping Order</h3>
+                <p>Calculate the total price of a shopping order.</p>
+                <a href="38.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">39</div>
+                <h3>Dynamic Fields</h3>
+                <p>Create dynamic fields based on user selection.</p>
+                <a href="39.html">Open Program</a>
+            </div>
+
+            <div class="card">
+                <div class="number">40</div>
+                <h3>Validation Without Reload</h3>
+                <p>Validate input and display errors without page reload.</p>
+                <a href="40.html">Open Program</a>
+            </div>
+
+        </div>
+
+        <div class="back">
+            <a href="../index.html">← Back to JavaScript Programs</a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

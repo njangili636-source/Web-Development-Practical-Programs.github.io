@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Events</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+        /* Header */
+        
+        .header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+        
+        .header h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 17px;
+            color: #d9f3f0;
+        }
+        /* Navigation */
+        
+        .nav {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .nav a {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+        
+        .nav a:hover {
+            background: white;
+            color: #203a43;
+            transform: translateY(-2px);
+        }
+        /* Program List */
+        
+        .program-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        
+        .program {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 18px 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(8px);
+            transition: 0.3s;
+        }
+        
+        .program:hover {
+            transform: translateX(6px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .program-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        /* Number Circle */
+        
+        .number {
+            min-width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: white;
+            color: #203a43;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        
+        .program-title {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+        /* Open Button */
+        
+        .open-btn {
+            text-decoration: none;
+            background: white;
+            color: #203a43;
+            padding: 9px 17px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            white-space: nowrap;
+            transition: 0.3s;
+        }
+        
+        .open-btn:hover {
+            background: #203a43;
+            color: white;
+            border: 1px solid white;
+        }
+        /* Footer */
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.25);
+        }
+        
+        .footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        /* Mobile */
+        
+        @media (max-width: 650px) {
+            body {
+                padding: 25px 12px;
+            }
+            .header h1 {
+                font-size: 30px;
+            }
+            .program {
+                align-items: flex-start;
+            }
+            .program-info {
+                align-items: flex-start;
+            }
+            .program-title {
+                font-size: 14px;
+            }
+            .open-btn {
+                padding: 8px 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <div class="header">
+
+            <h1>⚡ JavaScript Events</h1>
+
+            <p>
+                30 JavaScript programs based on Events
+            </p>
+
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav">
+
+            <a href="../index.html">
+                ← JavaScript Home
+            </a>
+
+            <a href="../../index.html">
+                🏠 Main Home
+            </a>
+
+        </div>
+
+        <!-- Programs -->
+        <div class="program-list">
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">01</div>
+                    <div class="program-title">
+                        onclick Event
+                    </div>
+                </div>
+                <a href="01-onclick.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">02</div>
+                    <div class="program-title">
+                        ondblclick Event
+                    </div>
+                </div>
+                <a href="02-ondblclick.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">03</div>
+                    <div class="program-title">
+                        Mouseover and Mouseout
+                    </div>
+                </div>
+                <a href="03-mouse.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">04</div>
+                    <div class="program-title">
+                        Mousedown and Mouseup
+                    </div>
+                </div>
+                <a href="04-mousebutton.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">05</div>
+                    <div class="program-title">
+                        Mousemove Event
+                    </div>
+                </div>
+                <a href="05-mousemove.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">06</div>
+                    <div class="program-title">
+                        Keydown Event
+                    </div>
+                </div>
+                <a href="06-keydown.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">07</div>
+                    <div class="program-title">
+                        Keyup Event
+                    </div>
+                </div>
+                <a href="07-keyup.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">08</div>
+                    <div class="program-title">
+                        Display Pressed Key
+                    </div>
+                </div>
+                <a href="08-keydisplay.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">09</div>
+                    <div class="program-title">
+                        Keypress Counter
+                    </div>
+                </div>
+                <a href="09-keycount.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">10</div>
+                    <div class="program-title">
+                        Focus and Blur
+                    </div>
+                </div>
+                <a href="10-focusblur.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">11</div>
+                    <div class="program-title">
+                        Change Event
+                    </div>
+                </div>
+                <a href="11-change.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">12</div>
+                    <div class="program-title">
+                        Input Event
+                    </div>
+                </div>
+                <a href="12-input.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">13</div>
+                    <div class="program-title">
+                        Submit Event
+                    </div>
+                </div>
+                <a href="13-submit.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">14</div>
+                    <div class="program-title">
+                        Reset Event
+                    </div>
+                </div>
+                <a href="14-reset.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">15</div>
+                    <div class="program-title">
+                        Button Background Color
+                    </div>
+                </div>
+                <a href="15-bg.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">16</div>
+                    <div class="program-title">
+                        Change Font Size
+                    </div>
+                </div>
+                <a href="16-font.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">17</div>
+                    <div class="program-title">
+                        Multiple Buttons
+                    </div>
+                </div>
+                <a href="17-multi.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">18</div>
+                    <div class="program-title">
+                        addEventListener()
+                    </div>
+                </div>
+                <a href="18-listener.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">19</div>
+                    <div class="program-title">
+                        Multiple Event Listeners
+                    </div>
+                </div>
+                <a href="19-multilistener.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">20</div>
+                    <div class="program-title">
+                        removeEventListener()
+                    </div>
+                </div>
+                <a href="20-removelistener.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">21</div>
+                    <div class="program-title">
+                        Event Bubbling
+                    </div>
+                </div>
+                <a href="21-bubbling.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">22</div>
+                    <div class="program-title">
+                        Event Capturing
+                    </div>
+                </div>
+                <a href="22-capturing.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">23</div>
+                    <div class="program-title">
+                        Event Delegation
+                    </div>
+                </div>
+                <a href="23-delegation.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">24</div>
+                    <div class="program-title">
+                        Drag and Drop
+                    </div>
+                </div>
+                <a href="24-drag.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">25</div>
+                    <div class="program-title">
+                        Mouse Coordinates
+                    </div>
+                </div>
+                <a href="25-coordinates.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">26</div>
+                    <div class="program-title">
+                        Keyboard Controlled Object
+                    </div>
+                </div>
+                <a href="26-moveobject.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">27</div>
+                    <div class="program-title">
+                        Click Counter
+                    </div>
+                </div>
+                <a href="27-clickcounter.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">28</div>
+                    <div class="program-title">
+                        Double Click Counter
+                    </div>
+                </div>
+                <a href="28-dblcounter.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">29</div>
+                    <div class="program-title">
+                        Reaction Time Game
+                    </div>
+                </div>
+                <a href="29-reaction.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">30</div>
+                    <div class="program-title">
+                        Typing Test
+                    </div>
+                </div>
+                <a href="30-typing.html" class="open-btn">Open →</a>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+
+            <p>⚡ JavaScript Events Practical Programs</p>
+
+            <p>
+                <a href="../index.html">
+                    ← Back to JavaScript Programs
+                </a>
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

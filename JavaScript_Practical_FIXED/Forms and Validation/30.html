@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>30. Job Application Form</title>
+<style>
+body{font-family:Arial,sans-serif;max-width:850px;margin:30px auto;padding:20px;background:#f5f5f5}
+.box{background:white;padding:25px;border-radius:10px;box-shadow:0 2px 8px #ccc}
+input,select,textarea,button{padding:9px;margin:6px 0;width:100%;box-sizing:border-box}
+button{cursor:pointer;width:auto;background:#333;color:white;border:0;border-radius:5px;padding:10px 16px}
+label{font-weight:bold;display:block;margin-top:10px}
+.error{color:#c00;font-size:14px}.success{color:green;font-weight:bold}
+table{border-collapse:collapse;width:100%;margin-top:15px}th,td{border:1px solid #aaa;padding:8px}
+nav{margin-bottom:15px}nav a{margin-right:15px}
+.step{display:none}.step.active{display:block}
+.preview{background:#eee;padding:15px;margin-top:15px}
+</style>
+</head>
+<body><nav><a href="index.html">Back to Forms & Validation</a> <a href="../index.html">Back to JavaScript Programs</a></nav>
+<div class="box"><h1>30. Job Application Form</h1><form id="f"><input id="n" required placeholder="Full name"><input id="e" type="email" required placeholder="Email"><input id="p" required placeholder="Phone"><input id="exp" type="number" min="0" required placeholder="Experience (years)"><textarea id="skills" required placeholder="Skills"></textarea><button>Apply</button></form><p id="o"></p></div>
+<script>f.onsubmit=e=>{e.preventDefault();let ok=f.checkValidity()&&/^\d{10}$/.test(p.value);o.textContent=ok?"Job application validated successfully!":"Please correct the application fields.";o.className=ok?"success":"error"}</script></body></html>

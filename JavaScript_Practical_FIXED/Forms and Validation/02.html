@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>2. Login Form Validation</title>
+<style>
+body{font-family:Arial,sans-serif;max-width:850px;margin:30px auto;padding:20px;background:#f5f5f5}
+.box{background:white;padding:25px;border-radius:10px;box-shadow:0 2px 8px #ccc}
+input,select,textarea,button{padding:9px;margin:6px 0;width:100%;box-sizing:border-box}
+button{cursor:pointer;width:auto;background:#333;color:white;border:0;border-radius:5px;padding:10px 16px}
+label{font-weight:bold;display:block;margin-top:10px}
+.error{color:#c00;font-size:14px}.success{color:green;font-weight:bold}
+table{border-collapse:collapse;width:100%;margin-top:15px}th,td{border:1px solid #aaa;padding:8px}
+nav{margin-bottom:15px}nav a{margin-right:15px}
+.step{display:none}.step.active{display:block}
+.preview{background:#eee;padding:15px;margin-top:15px}
+</style>
+</head>
+<body><nav><a href="index.html">Back to Forms & Validation</a> <a href="../index.html">Back to JavaScript Programs</a></nav>
+<div class="box"><h1>2. Login Form Validation</h1>
+<form id="f"><label>Username</label><input id="u"><label>Password</label><input id="p" type="password">
+<button>Login</button></form><p id="out"></p>
+</div>
+<script>f.onsubmit=e=>{e.preventDefault();out.textContent=u.value.trim().length>=3&&p.value.length>=6?"Login validation successful!":"Username must be 3+ chars and password 6+ chars.";out.className=out.textContent.includes("successful")?"success":"error"}</script></body></html>
