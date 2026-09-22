@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>2. alert(), confirm(), and prompt()</title>
+<style>
+body{font-family:Arial,sans-serif;max-width:850px;margin:35px auto;padding:20px;background:#f5f5f5}
+.card{background:white;padding:25px;border-radius:12px;box-shadow:0 2px 8px #ccc}
+button,input{padding:9px;margin:5px}#output{margin-top:15px;padding:12px;background:#eef2f5;border-radius:8px;min-height:25px}
+a{margin-right:15px}
+</style></head><body><div class="card">
+<h1>2. alert(), confirm(), and prompt()</h1><p>Demonstrate three Window dialog methods.</p><button onclick="alertDemo()">Alert</button><button onclick="confirmDemo()">Confirm</button><button onclick="promptDemo()">Prompt</button><div id="output"></div><hr>
+<a href="index.html">Back to Browser Objects Programs</a>
+<a href="../index.html">Back to JavaScript Programs</a>
+</div><script>function alertDemo(){alert('Hello! This is an alert.');output.textContent='Alert displayed.';}function confirmDemo(){let x=confirm('Do you want to continue?');output.textContent='Confirm result: '+x;}function promptDemo(){let x=prompt('Enter your name:');output.textContent=x?'Hello, '+x:'No name entered.';}</script></body></html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>35. createElement(), appendChild(), remove(), replaceChild()</title>
+<style>
+body{font-family:Arial,sans-serif;max-width:900px;margin:30px auto;padding:20px;background:#f5f5f5}
+.card{background:white;padding:25px;border-radius:12px;box-shadow:0 2px 8px #ccc}
+button,input,select,textarea{padding:8px;margin:5px}
+table{border-collapse:collapse;width:100%;margin-top:15px}th,td{border:1px solid #888;padding:8px;text-align:left}
+.item{padding:8px;margin:5px 0;background:#eee;border-radius:5px}
+#output{margin-top:15px;padding:12px;background:#eef2f5;border-radius:8px;min-height:25px}
+.gallery img{width:150px;height:100px;object-fit:cover;margin:5px}
+.tab{display:none;padding:15px;border:1px solid #aaa}.tab.active{display:block}
+.accordion{width:100%;text-align:left}
+.modal{display:none;position:fixed;inset:0;background:#0008;align-items:center;justify-content:center}
+.modalbox{background:white;padding:25px;border-radius:10px}
+.tooltip{position:relative;display:inline-block}.tip{display:none;position:absolute;bottom:120%;left:0;background:#222;color:white;padding:6px;border-radius:5px;white-space:nowrap}.tooltip:hover .tip{display:block}
+</style></head>
+<body><div class="card">
+<h1>35. createElement(), appendChild(), remove(), replaceChild()</h1><p>Demonstrate the four DOM methods.</p><div id="area"><p id="old">Original paragraph</p></div><button onclick="create()">createElement + appendChild</button><button onclick="removeEl()">remove</button><button onclick="replaceEl()">replaceChild</button>
+<div id="output"></div><hr>
+<a href="index.html">Back to DOM Manipulation</a> |
+<a href="../index.html">Back to JavaScript Programs</a>
+</div><script>function create(){let p=document.createElement('p');p.id='new';p.textContent='Created and appended element.';area.appendChild(p);output.textContent='createElement() and appendChild() used.';}function removeEl(){let x=document.getElementById('new');if(x){x.remove();output.textContent='remove() used.'}}function replaceEl(){let n=document.createElement('h3');n.textContent='Replacement element';let old=document.getElementById('old');if(old){area.replaceChild(n,old);output.textContent='replaceChild() used.'}}</script></body></html>

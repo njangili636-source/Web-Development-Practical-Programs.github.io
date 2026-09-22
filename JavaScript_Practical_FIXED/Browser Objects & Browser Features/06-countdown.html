@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>6. Countdown Timer</title>
+<style>
+body{font-family:Arial,sans-serif;max-width:850px;margin:35px auto;padding:20px;background:#f5f5f5}
+.card{background:white;padding:25px;border-radius:12px;box-shadow:0 2px 8px #ccc}
+button,input{padding:9px;margin:5px}#output{margin-top:15px;padding:12px;background:#eef2f5;border-radius:8px;min-height:25px}
+a{margin-right:15px}
+</style></head><body><div class="card">
+<h1>6. Countdown Timer</h1><p>Enter seconds and start a countdown.</p><input id="seconds" type="number" min="1" value="10"><button onclick="start()">Start Countdown</button><div id="output"></div><hr>
+<a href="index.html">Back to Browser Objects Programs</a>
+<a href="../index.html">Back to JavaScript Programs</a>
+</div><script>let t;function start(){clearInterval(t);let n=Number(seconds.value);output.textContent=n;t=setInterval(()=>{n--;output.textContent=n;if(n<=0){clearInterval(t);output.textContent='Time is up!';}},1000);}</script></body></html>

@@ -1,0 +1,348 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Browser Objects & Features</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f3f6ff;
+        }
+        /* Header */
+        
+        header {
+            background: linear-gradient(135deg, #ff512f, #dd2476);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+            box-shadow: 0 4px 12px #bbb;
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+        
+        header p {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        /* Main area */
+        
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        /* Program list */
+        
+        .program-list {
+            background: white;
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+        
+        .program {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            padding: 15px 18px;
+            border-radius: 10px;
+            background: #f8f9ff;
+            border-left: 6px solid #6c63ff;
+            transition: 0.3s;
+        }
+        
+        .program:hover {
+            transform: translateX(8px);
+            background: #e9e7ff;
+            box-shadow: 0 4px 10px #ddd;
+        }
+        /* Number */
+        
+        .number {
+            min-width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #6c63ff, #8f44fd);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 18px;
+        }
+        /* Program text */
+        
+        .program a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            font-weight: bold;
+            flex: 1;
+        }
+        
+        .program a:hover {
+            color: #6c2bd9;
+        }
+        /* Arrow */
+        
+        .arrow {
+            font-size: 22px;
+            color: #ff512f;
+        }
+        /* Different colors */
+        
+        .program:nth-child(4n+1) {
+            border-left-color: #ff512f;
+        }
+        
+        .program:nth-child(4n+2) {
+            border-left-color: #00b894;
+        }
+        
+        .program:nth-child(4n+3) {
+            border-left-color: #0984e3;
+        }
+        
+        .program:nth-child(4n+4) {
+            border-left-color: #fdcb6e;
+        }
+        /* Back button */
+        
+        .back {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .back a {
+            display: inline-block;
+            padding: 12px 22px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+        
+        .back a:hover {
+            transform: scale(1.05);
+        }
+        /* Mobile */
+        
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 24px;
+            }
+            .program {
+                padding: 12px;
+            }
+            .program a {
+                font-size: 14px;
+            }
+            .number {
+                min-width: 38px;
+                height: 38px;
+                margin-right: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>🌐 Browser Objects & Features</h1>
+        <p>JavaScript Programs – Browser Features</p>
+    </header>
+
+    <!-- Programs -->
+    <div class="container">
+
+        <div class="program-list">
+
+            <div class="program">
+                <div class="number">01</div>
+                <a href="01-window-object.html">
+                    Demonstrate the Window object.
+                </a>
+                <span class="arrow">➜</span>
+            </div>
+
+            <div class="program">
+                <div class="number">02</div>
+                <a href="02-alert-confirm-prompt.html">
+                    Demonstrate alert(), confirm(), and prompt().
+                </a>
+                <span class="arrow">➜</span>
+            </div>
+
+            <div class="program">
+                <div class="number">03</div>
+                <a href="03-settimeout.html">
+                    Create a program using setTimeout().
+                </a>
+                <span class="arrow">➜</span>
+            </div>
+
+            <div class="program">
+                <div class="number">04</div>
+                <a href="04-setinterval.html">
+                    Create a program using setInterval().
+                </a>
+                <span class="arrow">➜</span>
+            </div>
+
+            <div class="program">
+                <div class="number">05</div>
+                <a href="05-digital-clock.html">
+                    Create a digital clock using setInterval().
+                </a>
+                <span class="arrow">➜</span>
+            </div>
+
+            <div class="program">
+                <div class="number">06</div>
+                <a href="06-countdown.html">
+                    Create a countdown timer.
+                </a>
+                <span class="arrow">➜</span>
+            </div>
+
+            <div class="program">
+                <div class="number">07</div>
+                <a href="07-stopwatch.html">
+                    Create a stopwatch.
+                </a>
+                <span class="arrow">➜</span>
+            </div>
+
+            <div class="program">
+                <div class="number">08</div>
+                <a href="08-location-object.html">
+                    Demonstrate the Location object.
+                </a>
+                <span class="arrow">➜</span>
+            </div>
+
+            <div class="program">
+                <div class="number">09</div>
+                <a href="09-redirect.html">
+                    Create a button to redirect the user to another webpage.
+                </a>
+                <span class="arrow">➜</span>
+            </div>
+
+            <div class="program">
+                <div class="number">10</div>
+                <a href="10-current-url.html">
+                    Display the current webpage URL using JavaScript.
+                </a>
+                <span class="arrow">➜</span>
+            </div>
+
+            <div class="program">
+                <div class="number">11</div>
+                <a href="11-history-object.html">
+                    Demonstrate the History object.
+                </a>
+                <span class="arrow">➜</span>
+            </div>
+
+            <div class="program">
+                <div class="number">12</div>
+                <a href="12-back-forward-reload.html">
+                    Create buttons for Back, Forward, and Reload browser operations.
+                </a>
+                <span class="arrow">➜</span>
+            </div>
+
+            <div class="program">
+                <div class="number">13</div>
+                <a href="13-navigator-object.html">
+                    Demonstrate the Navigator object.
+                </a>
+                <span class="arrow">➜</span>
+            </div>
+
+            <div class="program">
+                <div class="number">14</div>
+                <a href="14-browser-info.html">
+                    Display browser information using JavaScript.
+                </a>
+                <span class="arrow">➜</span>
+            </div>
+
+            <div class="program">
+                <div class="number">15</div>
+                <a href="15-screen-size.html">
+                    Display the user's screen width and height.
+                </a>
+                <span class="arrow">➜</span>
+            </div>
+
+            <div class="program">
+                <div class="number">16</div>
+                <a href="16-online-offline.html">
+                    Detect whether the browser is online or offline.
+                </a>
+                <span class="arrow">➜</span>
+            </div>
+
+            <div class="program">
+                <div class="number">17</div>
+                <a href="17-browser-language.html">
+                    Display the current browser language.
+                </a>
+                <span class="arrow">➜</span>
+            </div>
+
+            <div class="program">
+                <div class="number">18</div>
+                <a href="18-geolocation.html">
+                    Demonstrate browser geolocation.
+                </a>
+                <span class="arrow">➜</span>
+            </div>
+
+            <div class="program">
+                <div class="number">19</div>
+                <a href="19-coordinates.html">
+                    Display the user's current geographical coordinates using the Geolocation API.
+                </a>
+                <span class="arrow">➜</span>
+            </div>
+
+            <div class="program">
+                <div class="number">20</div>
+                <a href="20-online-offline-update.html">
+                    Create a webpage that updates information when the browser goes online/offline.
+                </a>
+                <span class="arrow">➜</span>
+            </div>
+
+        </div>
+
+        <!-- Back -->
+        <div class="back">
+            <a href="../index.html">← Back to JavaScript Programs</a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+```

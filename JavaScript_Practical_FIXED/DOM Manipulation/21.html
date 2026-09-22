@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>21. Dependent Dropdown: Country → State → City</title>
+<style>
+body{font-family:Arial,sans-serif;max-width:900px;margin:30px auto;padding:20px;background:#f5f5f5}
+.card{background:white;padding:25px;border-radius:12px;box-shadow:0 2px 8px #ccc}
+button,input,select,textarea{padding:8px;margin:5px}
+table{border-collapse:collapse;width:100%;margin-top:15px}th,td{border:1px solid #888;padding:8px;text-align:left}
+.item{padding:8px;margin:5px 0;background:#eee;border-radius:5px}
+#output{margin-top:15px;padding:12px;background:#eef2f5;border-radius:8px;min-height:25px}
+.gallery img{width:150px;height:100px;object-fit:cover;margin:5px}
+.tab{display:none;padding:15px;border:1px solid #aaa}.tab.active{display:block}
+.accordion{width:100%;text-align:left}
+.modal{display:none;position:fixed;inset:0;background:#0008;align-items:center;justify-content:center}
+.modalbox{background:white;padding:25px;border-radius:10px}
+.tooltip{position:relative;display:inline-block}.tip{display:none;position:absolute;bottom:120%;left:0;background:#222;color:white;padding:6px;border-radius:5px;white-space:nowrap}.tooltip:hover .tip{display:block}
+</style></head>
+<body><div class="card">
+<h1>21. Dependent Dropdown: Country → State → City</h1><p>Select country, state and city dynamically.</p><select id="country" onchange="loadStates()"><option value="">Country</option><option>India</option><option>USA</option></select><select id="state" onchange="loadCities()"><option value="">State</option></select><select id="city"><option value="">City</option></select>
+<div id="output"></div><hr>
+<a href="index.html">Back to DOM Manipulation</a> |
+<a href="../index.html">Back to JavaScript Programs</a>
+</div><script>let data={India:{Telangana:['Hyderabad','Warangal'],Karnataka:['Bengaluru','Mysuru']},USA:{California:['Los Angeles','San Diego'],Texas:['Dallas','Austin']}};function loadStates(){state.innerHTML='<option value="">State</option>';city.innerHTML='<option value="">City</option>';Object.keys(data[country.value]||{}).forEach(x=>state.add(new Option(x,x)));}function loadCities(){city.innerHTML='<option value="">City</option>';let a=data[country.value]?.[state.value]||[];a.forEach(x=>city.add(new Option(x,x)));}</script></body></html>

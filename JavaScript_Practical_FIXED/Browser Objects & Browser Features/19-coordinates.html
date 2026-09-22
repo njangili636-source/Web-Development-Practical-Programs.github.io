@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>19. Current Geographical Coordinates</title>
+<style>
+body{font-family:Arial,sans-serif;max-width:850px;margin:35px auto;padding:20px;background:#f5f5f5}
+.card{background:white;padding:25px;border-radius:12px;box-shadow:0 2px 8px #ccc}
+button,input{padding:9px;margin:5px}#output{margin-top:15px;padding:12px;background:#eef2f5;border-radius:8px;min-height:25px}
+a{margin-right:15px}
+</style></head><body><div class="card">
+<h1>19. Current Geographical Coordinates</h1><p>Display latitude and longitude using the Geolocation API.</p><button onclick="getCoordinates()">Get Coordinates</button><div id="output"></div><hr>
+<a href="index.html">Back to Browser Objects Programs</a>
+<a href="../index.html">Back to JavaScript Programs</a>
+</div><script>function getCoordinates(){if(!navigator.geolocation){output.textContent='Geolocation is not supported.';return}navigator.geolocation.getCurrentPosition(p=>output.innerHTML='Latitude: '+p.coords.latitude+'<br>Longitude: '+p.coords.longitude,e=>output.textContent='Unable to get coordinates: '+e.message);}</script></body></html>

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>5. Digital Clock using setInterval()</title>
+<style>
+body{font-family:Arial,sans-serif;max-width:850px;margin:35px auto;padding:20px;background:#f5f5f5}
+.card{background:white;padding:25px;border-radius:12px;box-shadow:0 2px 8px #ccc}
+button,input{padding:9px;margin:5px}#output{margin-top:15px;padding:12px;background:#eef2f5;border-radius:8px;min-height:25px}
+a{margin-right:15px}
+</style></head><body><div class="card">
+<h1>5. Digital Clock using setInterval()</h1><p>The current time updates every second.</p><h2 id="clock"></h2><div id="output"></div><hr>
+<a href="index.html">Back to Browser Objects Programs</a>
+<a href="../index.html">Back to JavaScript Programs</a>
+</div><script>function update(){clock.textContent=new Date().toLocaleTimeString();}update();setInterval(update,1000);</script></body></html>

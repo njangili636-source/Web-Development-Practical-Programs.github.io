@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>20. Update Information when Online/Offline</title>
+<style>
+body{font-family:Arial,sans-serif;max-width:850px;margin:35px auto;padding:20px;background:#f5f5f5}
+.card{background:white;padding:25px;border-radius:12px;box-shadow:0 2px 8px #ccc}
+button,input{padding:9px;margin:5px}#output{margin-top:15px;padding:12px;background:#eef2f5;border-radius:8px;min-height:25px}
+a{margin-right:15px}
+</style></head><body><div class="card">
+<h1>20. Update Information when Online/Offline</h1><p>The status message changes automatically when the connection changes.</p><h2 id="status"></h2><div id="output"></div><hr>
+<a href="index.html">Back to Browser Objects Programs</a>
+<a href="../index.html">Back to JavaScript Programs</a>
+</div><script>function update(){status.textContent=navigator.onLine?'You are ONLINE':'You are OFFLINE';}window.addEventListener('online',update);window.addEventListener('offline',update);update();</script></body></html>
