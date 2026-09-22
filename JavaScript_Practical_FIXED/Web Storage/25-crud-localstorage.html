@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>25. CRUD Application using localStorage</title>
+<style>
+body{font-family:Arial,sans-serif;max-width:850px;margin:40px auto;padding:20px;background:#f5f5f5}
+.card{background:white;padding:25px;border-radius:12px;box-shadow:0 2px 8px #ccc}
+input,button,select{padding:9px;margin:5px}
+button{cursor:pointer}
+#output{margin-top:15px;padding:12px;background:#eef2f5;border-radius:8px;min-height:25px}
+a{margin-right:15px}
+</style>
+</head>
+<body><div class="card">
+<h1>25. CRUD Application using localStorage</h1>
+<p>Create, Read, Update and Delete records.</p>
+<input id="name" placeholder="Name"><input id="email" placeholder="Email"><input id="editId" type="hidden"><button onclick="save()">Create / Update</button><button onclick="show()">Refresh</button><div id="records"></div>
+<div id="output"></div>
+<hr>
+<a href="index.html">Back to Web Storage Programs</a>
+<a href="../index.html">Back to JavaScript Programs</a>
+</div>
+<script>
+function get(){return JSON.parse(localStorage.getItem('crud')||'[]')}function save(){let a=get(),id=editId.value;if(id===''){a.push({id:Date.now(),name:name.value,email:email.value});}else{let x=a.find(r=>r.id==id);x.name=name.value;x.email=email.value;}localStorage.setItem('crud',JSON.stringify(a));editId.value='';name.value='';email.value='';show();}function edit(id){let x=get().find(r=>r.id==id);name.value=x.name;email.value=x.email;editId.value=id;}function del(id){localStorage.setItem('crud',JSON.stringify(get().filter(r=>r.id!=id)));show();}function show(){records.innerHTML=get().map(r=>`<p>${r.name} - ${r.email} <button onclick="edit(${r.id})">Edit</button><button onclick="del(${r.id})">Delete</button></p>`).join('')||'No records';}show();
+</script>
+</body></html>

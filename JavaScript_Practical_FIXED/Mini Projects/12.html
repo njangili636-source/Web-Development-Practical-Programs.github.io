@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>12. Simple Shopping Cart</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f4f6f8;margin:0;padding:25px;color:#222}
+.container{max-width:850px;margin:auto;background:white;padding:25px;border-radius:12px;box-shadow:0 2px 10px #ccc}
+h1{color:#333} button{padding:9px 14px;margin:5px;cursor:pointer;border:0;border-radius:6px;background:#333;color:white}
+input,select,textarea{padding:9px;margin:5px;width:auto;max-width:95%}
+.output{margin-top:15px;padding:12px;background:#f0f0f0;border-radius:8px}
+a{color:#333}
+nav{margin-top:25px;padding-top:15px;border-top:1px solid #ddd}
+</style>
+</head>
+<body><div class="container">
+<h1>12. Simple Shopping Cart</h1>
+
+<div id="products"></div><h3>Cart Total: ₹<span id="total">0</span></h3><ul id="cart"></ul>
+<script>const items=[['Pen',20],['Book',100],['Bag',500]];let cartItems=[];products.innerHTML=items.map((x,i)=>`<p>${x[0]} - ₹${x[1]} <button onclick="add(${i})">Add</button></p>`).join('');function add(i){cartItems.push(items[i]);render()}function render(){cart.innerHTML=cartItems.map(x=>`<li>${x[0]} - ₹${x[1]}</li>`).join('');total.textContent=cartItems.reduce((s,x)=>s+x[1],0)}</script>
+<nav><a href="index.html">← Back to Mini Projects</a> | <a href="../index.html">← Back to JavaScript Programs</a></nav>
+</div></body></html>

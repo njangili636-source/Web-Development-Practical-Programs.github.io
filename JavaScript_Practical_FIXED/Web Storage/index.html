@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Web Storage Programs</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+        /* Header */
+        
+        .header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+        
+        .header h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 17px;
+            color: #d9f3f0;
+        }
+        /* Navigation */
+        
+        .nav {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .nav a {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+        
+        .nav a:hover {
+            background: white;
+            color: #203a43;
+            transform: translateY(-2px);
+        }
+        /* Program List */
+        
+        .program-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        
+        .program {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 18px 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(8px);
+            transition: 0.3s;
+        }
+        
+        .program:hover {
+            transform: translateX(6px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .program-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        /* Number Circle */
+        
+        .number {
+            min-width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: white;
+            color: #203a43;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        .program-title {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+        /* Open Button */
+        
+        .open-btn {
+            text-decoration: none;
+            background: white;
+            color: #203a43;
+            padding: 9px 17px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            white-space: nowrap;
+            transition: 0.3s;
+        }
+        
+        .open-btn:hover {
+            background: #203a43;
+            color: white;
+            border: 1px solid white;
+        }
+        /* Footer */
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.25);
+        }
+        
+        .footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        /* Mobile */
+        
+        @media (max-width: 650px) {
+            body {
+                padding: 25px 12px;
+            }
+            .header h1 {
+                font-size: 30px;
+            }
+            .program {
+                align-items: flex-start;
+            }
+            .program-info {
+                align-items: flex-start;
+            }
+            .open-btn {
+                padding: 8px 12px;
+            }
+            .program-title {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <div class="header">
+            <h1>💾 Web Storage Programs</h1>
+            <p>25 JavaScript programs using localStorage and sessionStorage</p>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav">
+            <a href="../index.html">← JavaScript Home</a>
+            <a href="../../index.html">🏠 Main Home</a>
+        </div>
+
+        <!-- Programs -->
+        <div class="program-list">
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">01</div>
+                    <div class="program-title">Store a username using localStorage.</div>
+                </div>
+                <a href="01-store-username.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">02</div>
+                    <div class="program-title">Retrieve and display data from localStorage.</div>
+                </div>
+                <a href="02-retrieve-display.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">03</div>
+                    <div class="program-title">Update data stored in localStorage.</div>
+                </div>
+                <a href="03-update-data.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">04</div>
+                    <div class="program-title">Delete an item from localStorage.</div>
+                </div>
+                <a href="04-delete-item.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">05</div>
+                    <div class="program-title">Clear all localStorage data.</div>
+                </div>
+                <a href="05-clear-all.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">06</div>
+                    <div class="program-title">Store multiple values using localStorage.</div>
+                </div>
+                <a href="06-multiple-values.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">07</div>
+                    <div class="program-title">Store an array in localStorage using JSON.</div>
+                </div>
+                <a href="07-array-json.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">08</div>
+                    <div class="program-title">Store a JavaScript object in localStorage.</div>
+                </div>
+                <a href="08-object-json.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">09</div>
+                    <div class="program-title">Create a student record system using localStorage.</div>
+                </div>
+                <a href="09-student-record.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">10</div>
+                    <div class="program-title">Create a to-do list using localStorage.</div>
+                </div>
+                <a href="10-todo-localstorage.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">11</div>
+                    <div class="program-title">Create a notes application using localStorage.</div>
+                </div>
+                <a href="11-notes-localstorage.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">12</div>
+                    <div class="program-title">Create a shopping cart using localStorage.</div>
+                </div>
+                <a href="12-shopping-cart.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">13</div>
+                    <div class="program-title">Create a login preference system using localStorage.</div>
+                </div>
+                <a href="13-login-preference.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">14</div>
+                    <div class="program-title">Create a dark/light theme switcher using localStorage.</div>
+                </div>
+                <a href="14-theme-switcher.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">15</div>
+                    <div class="program-title">Save the user's preferred font size using localStorage.</div>
+                </div>
+                <a href="15-font-size.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">16</div>
+                    <div class="program-title">Create a recently viewed items feature using localStorage.</div>
+                </div>
+                <a href="16-recently-viewed.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">17</div>
+                    <div class="program-title">Create a visitor counter using browser storage.</div>
+                </div>
+                <a href="17-visitor-counter.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">18</div>
+                    <div class="program-title">Compare localStorage and sessionStorage.</div>
+                </div>
+                <a href="18-local-vs-session.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">19</div>
+                    <div class="program-title">Store temporary form data using sessionStorage.</div>
+                </div>
+                <a href="19-session-form.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">20</div>
+                    <div class="program-title">Create a multi-page form using sessionStorage.</div>
+                </div>
+                <a href="20-multipage-form.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">21</div>
+                    <div class="program-title">Save form data automatically using localStorage.</div>
+                </div>
+                <a href="21-auto-save-form.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">22</div>
+                    <div class="program-title">Restore previously entered form data after refreshing the page.</div>
+                </div>
+                <a href="22-restore-form.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">23</div>
+                    <div class="program-title">Create a shopping cart that persists after page refresh.</div>
+                </div>
+                <a href="23-persistent-cart.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">24</div>
+                    <div class="program-title">Create a student marks database using localStorage.</div>
+                </div>
+                <a href="24-student-marks.html" class="open-btn">Open →</a>
+            </div>
+
+            <div class="program">
+                <div class="program-info">
+                    <div class="number">25</div>
+                    <div class="program-title">
+                        Create a CRUD application using localStorage — Create, Read, Update, and Delete records.
+                    </div>
+                </div>
+                <a href="25-crud-localstorage.html" class="open-btn">Open →</a>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>💻 JavaScript Practical Programs</p>
+            <p>
+                <a href="../index.html">← Back to JavaScript Programs</a>
+            </p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

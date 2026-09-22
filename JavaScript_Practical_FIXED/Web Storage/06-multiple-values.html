@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>6. Store Multiple Values</title>
+<style>
+body{font-family:Arial,sans-serif;max-width:850px;margin:40px auto;padding:20px;background:#f5f5f5}
+.card{background:white;padding:25px;border-radius:12px;box-shadow:0 2px 8px #ccc}
+input,button,select{padding:9px;margin:5px}
+button{cursor:pointer}
+#output{margin-top:15px;padding:12px;background:#eef2f5;border-radius:8px;min-height:25px}
+a{margin-right:15px}
+</style>
+</head>
+<body><div class="card">
+<h1>6. Store Multiple Values</h1>
+<p>Store name, age and city.</p>
+<input id="name" placeholder="Name"><input id="age" placeholder="Age"><input id="city" placeholder="City"><button onclick="save()">Save</button>
+<div id="output"></div>
+<hr>
+<a href="index.html">Back to Web Storage Programs</a>
+<a href="../index.html">Back to JavaScript Programs</a>
+</div>
+<script>
+function save(){localStorage.setItem('name',name.value);localStorage.setItem('age',age.value);localStorage.setItem('city',city.value);output.textContent=`Saved: ${name.value}, ${age.value}, ${city.value}`;}
+</script>
+</body></html>

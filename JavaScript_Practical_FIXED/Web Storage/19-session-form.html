@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>19. Temporary Form Data using sessionStorage</title>
+<style>
+body{font-family:Arial,sans-serif;max-width:850px;margin:40px auto;padding:20px;background:#f5f5f5}
+.card{background:white;padding:25px;border-radius:12px;box-shadow:0 2px 8px #ccc}
+input,button,select{padding:9px;margin:5px}
+button{cursor:pointer}
+#output{margin-top:15px;padding:12px;background:#eef2f5;border-radius:8px;min-height:25px}
+a{margin-right:15px}
+</style>
+</head>
+<body><div class="card">
+<h1>19. Temporary Form Data using sessionStorage</h1>
+<p>Store temporary form data for the current tab.</p>
+<input id="name" placeholder="Name"><input id="email" placeholder="Email"><button onclick="save()">Save</button><button onclick="load()">Load</button>
+<div id="output"></div>
+<hr>
+<a href="index.html">Back to Web Storage Programs</a>
+<a href="../index.html">Back to JavaScript Programs</a>
+</div>
+<script>
+function save(){sessionStorage.setItem('form',JSON.stringify({name:name.value,email:email.value}));output.textContent='Form data saved for this session.';}function load(){let x=JSON.parse(sessionStorage.getItem('form')||'{}');name.value=x.name||'';email.value=x.email||'';output.textContent='Form data loaded.';}
+</script>
+</body></html>

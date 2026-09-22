@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>23. Shopping Cart Persists after Refresh</title>
+<style>
+body{font-family:Arial,sans-serif;max-width:850px;margin:40px auto;padding:20px;background:#f5f5f5}
+.card{background:white;padding:25px;border-radius:12px;box-shadow:0 2px 8px #ccc}
+input,button,select{padding:9px;margin:5px}
+button{cursor:pointer}
+#output{margin-top:15px;padding:12px;background:#eef2f5;border-radius:8px;min-height:25px}
+a{margin-right:15px}
+</style>
+</head>
+<body><div class="card">
+<h1>23. Shopping Cart Persists after Refresh</h1>
+<p>Add products; refresh the page and the cart remains.</p>
+<button onclick="add('Phone')">Add Phone</button><button onclick="add('Bag')">Add Bag</button><button onclick="clearCart()">Clear</button>
+<div id="output"></div>
+<hr>
+<a href="index.html">Back to Web Storage Programs</a>
+<a href="../index.html">Back to JavaScript Programs</a>
+</div>
+<script>
+let c=JSON.parse(localStorage.getItem('persistentCart')||'[]');function render(){output.textContent='Cart: '+(c.join(', ')||'Empty');}function add(x){c.push(x);localStorage.setItem('persistentCart',JSON.stringify(c));render();}function clearCart(){c=[];localStorage.setItem('persistentCart','[]');render();}render();
+</script>
+</body></html>

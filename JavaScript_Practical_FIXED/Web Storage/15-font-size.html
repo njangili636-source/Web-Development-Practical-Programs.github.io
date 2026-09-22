@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>15. Save Preferred Font Size</title>
+<style>
+body{font-family:Arial,sans-serif;max-width:850px;margin:40px auto;padding:20px;background:#f5f5f5}
+.card{background:white;padding:25px;border-radius:12px;box-shadow:0 2px 8px #ccc}
+input,button,select{padding:9px;margin:5px}
+button{cursor:pointer}
+#output{margin-top:15px;padding:12px;background:#eef2f5;border-radius:8px;min-height:25px}
+a{margin-right:15px}
+</style>
+</head>
+<body><div class="card">
+<h1>15. Save Preferred Font Size</h1>
+<p>Choose a font size and save it.</p>
+<select id="size" onchange="save()"><option value="16px">16px</option><option value="20px">20px</option><option value="24px">24px</option><option value="30px">30px</option></select><p id="text">This text uses your saved font size.</p>
+<div id="output"></div>
+<hr>
+<a href="index.html">Back to Web Storage Programs</a>
+<a href="../index.html">Back to JavaScript Programs</a>
+</div>
+<script>
+function apply(){let s=localStorage.getItem('fontSize')||'16px';text.style.fontSize=s;size.value=s;}function save(){localStorage.setItem('fontSize',size.value);apply();}apply();
+</script>
+</body></html>

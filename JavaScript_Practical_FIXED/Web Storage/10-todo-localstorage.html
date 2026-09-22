@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>10. To-Do List using localStorage</title>
+<style>
+body{font-family:Arial,sans-serif;max-width:850px;margin:40px auto;padding:20px;background:#f5f5f5}
+.card{background:white;padding:25px;border-radius:12px;box-shadow:0 2px 8px #ccc}
+input,button,select{padding:9px;margin:5px}
+button{cursor:pointer}
+#output{margin-top:15px;padding:12px;background:#eef2f5;border-radius:8px;min-height:25px}
+a{margin-right:15px}
+</style>
+</head>
+<body><div class="card">
+<h1>10. To-Do List using localStorage</h1>
+<p>Add tasks and keep them after refresh.</p>
+<input id="task" placeholder="Task"><button onclick="add()">Add</button><ul id="list"></ul>
+<div id="output"></div>
+<hr>
+<a href="index.html">Back to Web Storage Programs</a>
+<a href="../index.html">Back to JavaScript Programs</a>
+</div>
+<script>
+let a=JSON.parse(localStorage.getItem('todos')||'[]');function render(){list.innerHTML=a.map((x,i)=>`<li>${x} <button onclick="removeTask(${i})">Delete</button></li>`).join('');}function add(){if(task.value.trim()){a.push(task.value);localStorage.setItem('todos',JSON.stringify(a));task.value='';render();}}function removeTask(i){a.splice(i,1);localStorage.setItem('todos',JSON.stringify(a));render();}render();
+</script>
+</body></html>

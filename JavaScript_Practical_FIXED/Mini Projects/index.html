@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Mini Projects</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            min-height: 100vh;
+            background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+            color: white;
+        }
+        /* Header */
+        
+        header {
+            text-align: center;
+            padding: 50px 20px 30px;
+        }
+        
+        header .icon {
+            font-size: 55px;
+        }
+        
+        header h1 {
+            font-size: 42px;
+            margin: 12px 0;
+        }
+        
+        header p {
+            font-size: 18px;
+            color: #d7eaff;
+        }
+        /* Navigation */
+        
+        .navigation {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+        
+        .navigation a {
+            display: inline-block;
+            padding: 11px 22px;
+            margin: 5px;
+            border: 1px solid #ffffff66;
+            border-radius: 30px;
+            color: white;
+            text-decoration: none;
+            background: #ffffff18;
+            transition: 0.3s;
+        }
+        
+        .navigation a:hover {
+            background: white;
+            color: #203a43;
+        }
+        /* Main */
+        
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+        }
+        
+        .heading {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .heading h2 {
+            font-size: 28px;
+        }
+        
+        .heading p {
+            margin-top: 8px;
+            color: #cfe8ff;
+        }
+        /* Project List */
+        
+        .project-list {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 10px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .project {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 18px 20px;
+            margin: 10px 0;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.95);
+            color: #222;
+            transition: 0.3s;
+        }
+        
+        .project:hover {
+            transform: translateX(10px);
+            background: #ffffff;
+            box-shadow: 0 8px 20px #0005;
+        }
+        /* Number */
+        
+        .number {
+            min-width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            background: linear-gradient(135deg, #ff512f, #dd2476);
+        }
+        
+        .project:nth-child(3n+2) .number {
+            background: linear-gradient(135deg, #11998e, #38ef7d);
+        }
+        
+        .project:nth-child(3n) .number {
+            background: linear-gradient(135deg, #396afc, #2948ff);
+        }
+        /* Project Information */
+        
+        .details {
+            flex: 1;
+        }
+        
+        .details h3 {
+            font-size: 19px;
+            margin-bottom: 5px;
+            color: #263238;
+        }
+        
+        .details p {
+            color: #666;
+            font-size: 14px;
+        }
+        /* Open Button */
+        
+        .open-btn {
+            text-decoration: none;
+            color: white;
+            background: #263238;
+            padding: 10px 18px;
+            border-radius: 22px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        
+        .open-btn:hover {
+            background: #7b1fa2;
+        }
+        /* Footer */
+        
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #cfe8ff;
+        }
+        
+        footer p {
+            margin: 5px;
+        }
+        /* Mobile */
+        
+        @media (max-width: 650px) {
+            header h1 {
+                font-size: 30px;
+            }
+            .project {
+                gap: 12px;
+                padding: 15px;
+            }
+            .number {
+                min-width: 42px;
+                height: 42px;
+                font-size: 13px;
+            }
+            .details h3 {
+                font-size: 16px;
+            }
+            .details p {
+                font-size: 12px;
+            }
+            .open-btn {
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .project {
+                flex-wrap: wrap;
+            }
+            .open-btn {
+                margin-left: 62px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <div class="icon"></div>
+
+        <h1>JavaScript Mini Projects</h1>
+
+        <p>
+            Interactive Web Development Projects
+        </p>
+
+    </header>
+
+
+    <!-- Navigation -->
+    <div class="navigation">
+
+        <a href="../index.html">🏠 JavaScript Home</a>
+
+        <a href="../../index.html">🌐 Main Home</a>
+
+    </div>
+
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <div class="heading">
+
+            <h2>📋 Project List</h2>
+
+            <p>
+                Select any project to view and run the program.
+            </p>
+
+        </div>
+
+
+        <div class="project-list">
+
+            <!-- 01 -->
+            <div class="project">
+                <div class="number">01</div>
+
+                <div class="details">
+                    <h3>🧮 Digital Calculator</h3>
+                    <p>Create a digital calculator.</p>
+                </div>
+
+                <a href="01.html" class="open-btn">Open →</a>
+            </div>
+
+
+            <!-- 02 -->
+            <div class="project">
+                <div class="number">02</div>
+
+                <div class="details">
+                    <h3>🕐 Digital Clock</h3>
+                    <p>Create a digital clock using JavaScript.</p>
+                </div>
+
+                <a href="02.html" class="open-btn">Open →</a>
+            </div>
+
+
+            <!-- 03 -->
+            <div class="project">
+                <div class="number">03</div>
+
+                <div class="details">
+                    <h3>⏱️ Stopwatch</h3>
+                    <p>Create a working stopwatch.</p>
+                </div>
+
+                <a href="03.html" class="open-btn">Open →</a>
+            </div>
+
+
+            <!-- 04 -->
+            <div class="project">
+                <div class="number">04</div>
+
+                <div class="details">
+                    <h3>⏳ Countdown Timer</h3>
+                    <p>Create a countdown timer.</p>
+                </div>
+
+                <a href="04.html" class="open-btn">Open →</a>
+            </div>
+
+
+            <!-- 05 -->
+            <div class="project">
+                <div class="number">05</div>
+
+                <div class="details">
+                    <h3>✅ To-Do List Application</h3>
+                    <p>Create a task management application.</p>
+                </div>
+
+                <a href="05.html" class="open-btn">Open →</a>
+            </div>
+
+
+            <!-- 06 -->
+            <div class="project">
+                <div class="number">06</div>
+
+                <div class="details">
+                    <h3>🌦️ Weather Application</h3>
+                    <p>Create a weather application using an API.</p>
+                </div>
+
+                <a href="06.html" class="open-btn">Open →</a>
+            </div>
+
+
+            <!-- 07 -->
+            <div class="project">
+                <div class="number">07</div>
+
+                <div class="details">
+                    <h3>🧠 Quiz Application</h3>
+                    <p>Create an interactive quiz application.</p>
+                </div>
+
+                <a href="07.html" class="open-btn">Open →</a>
+            </div>
+
+
+            <!-- 08 -->
+            <div class="project">
+                <div class="number">08</div>
+
+                <div class="details">
+                    <h3>🎯 Number Guessing Game</h3>
+                    <p>Create a number guessing game.</p>
+                </div>
+
+                <a href="08.html" class="open-btn">Open →</a>
+            </div>
+
+
+            <!-- 09 -->
+            <div class="project">
+                <div class="number">09</div>
+
+                <div class="details">
+                    <h3>❌⭕ Tic-Tac-Toe Game</h3>
+                    <p>Create a simple Tic-Tac-Toe game.</p>
+                </div>
+
+                <a href="09.html" class="open-btn">Open →</a>
+            </div>
+
+
+            <!-- 10 -->
+            <div class="project">
+                <div class="number">10</div>
+
+                <div class="details">
+                    <h3>💰 Expense Tracker</h3>
+                    <p>Create a simple expense tracking application.</p>
+                </div>
+
+                <a href="10.html" class="open-btn">Open →</a>
+            </div>
+
+
+            <!-- 11 -->
+            <div class="project">
+                <div class="number">11</div>
+
+                <div class="details">
+                    <h3>🎓 Student Marks / Grade Calculator</h3>
+                    <p>Calculate student marks and grades.</p>
+                </div>
+
+                <a href="11.html" class="open-btn">Open →</a>
+            </div>
+
+
+            <!-- 12 -->
+            <div class="project">
+                <div class="number">12</div>
+
+                <div class="details">
+                    <h3>🛒 Simple Shopping Cart</h3>
+                    <p>Create a shopping cart using JavaScript.</p>
+                </div>
+
+                <a href="12.html" class="open-btn">Open →</a>
+            </div>
+
+
+            <!-- 13 -->
+            <div class="project">
+                <div class="number">13</div>
+
+                <div class="details">
+                    <h3>📝 Notes Application</h3>
+                    <p>Create a notes application using localStorage.</p>
+                </div>
+
+                <a href="13.html" class="open-btn">Open →</a>
+            </div>
+
+
+            <!-- 14 -->
+            <div class="project">
+                <div class="number">14</div>
+
+                <div class="details">
+                    <h3>🔐 Random Password Generator</h3>
+                    <p>Create a random password generator.</p>
+                </div>
+
+                <a href="14.html" class="open-btn">Open →</a>
+            </div>
+
+
+            <!-- 15 -->
+            <div class="project">
+                <div class="number">15</div>
+
+                <div class="details">
+                    <h3>⚖️ BMI Calculator</h3>
+                    <p>Create a BMI calculator.</p>
+                </div>
+
+                <a href="15.html" class="open-btn">Open →</a>
+            </div>
+
+
+            <!-- 16 -->
+            <div class="project">
+                <div class="number">16</div>
+
+                <div class="details">
+                    <h3>💱 Currency Converter</h3>
+                    <p>Create a currency converter using an API.</p>
+                </div>
+
+                <a href="16.html" class="open-btn">Open →</a>
+            </div>
+
+
+            <!-- 17 -->
+            <div class="project">
+                <div class="number">17</div>
+
+                <div class="details">
+                    <h3>💼 Interactive Portfolio Website</h3>
+                    <p>Create a complete interactive portfolio website.</p>
+                </div>
+
+                <a href="17.html" class="open-btn">Open →</a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p><strong>JavaScript Mini Projects</strong></p>
+
+        <p>17 Practical Mini Projects</p>
+
+        <p>Web Development Practical Assignment • 2026</p>
+
+    </footer>
+
+</body>
+
+</html>

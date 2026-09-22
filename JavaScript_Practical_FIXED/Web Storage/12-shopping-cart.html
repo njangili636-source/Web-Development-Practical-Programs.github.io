@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>12. Shopping Cart using localStorage</title>
+<style>
+body{font-family:Arial,sans-serif;max-width:850px;margin:40px auto;padding:20px;background:#f5f5f5}
+.card{background:white;padding:25px;border-radius:12px;box-shadow:0 2px 8px #ccc}
+input,button,select{padding:9px;margin:5px}
+button{cursor:pointer}
+#output{margin-top:15px;padding:12px;background:#eef2f5;border-radius:8px;min-height:25px}
+a{margin-right:15px}
+</style>
+</head>
+<body><div class="card">
+<h1>12. Shopping Cart using localStorage</h1>
+<p>Add products to a persistent cart.</p>
+<button onclick="add('Laptop')">Add Laptop</button><button onclick="add('Mouse')">Add Mouse</button><button onclick="add('Keyboard')">Add Keyboard</button><button onclick="clearCart()">Clear Cart</button>
+<div id="output"></div>
+<hr>
+<a href="index.html">Back to Web Storage Programs</a>
+<a href="../index.html">Back to JavaScript Programs</a>
+</div>
+<script>
+let cart=JSON.parse(localStorage.getItem('cart')||'[]');function render(){output.textContent='Cart: '+(cart.join(', ')||'Empty');}function add(x){cart.push(x);localStorage.setItem('cart',JSON.stringify(cart));render();}function clearCart(){cart=[];localStorage.setItem('cart','[]');render();}render();
+</script>
+</body></html>
